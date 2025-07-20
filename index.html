@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>7S Music Productions</title>
+    <link href="https://fonts.googleapis.com/css?family=Montserrat:700,400&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+    <header class="header-bg">
+        <img src="logo.png" alt="7S Logo" class="site-logo">
+        <h1 style="display:inline-block; vertical-align:middle;">Shunya Music Studios</h1>
+        <nav>
+            <a href="#about">About</a>
+            <a href="#services">Services</a>
+            <a href="#contact">Contact</a>
+        </nav>
+    </header>
+    <section class="hero" id="about">
+        <h2>Crafting Sound, Inspiring Creativity</h2>
+        <p>
+            7 Shunya Music Studios, located in the heart of Prayagraj, India, is a premier music production house
+            offering end-to-end services including recording, mixing, mastering, and original compositions. We
+            collaborate with artists, creators, and brands to transform musical ideas into powerful, high-quality audio
+            experiences. With a passion for creativity and a commitment to excellence, we help bring every sonic vision
+            to life.
+        </p>
+    </section>
+    <section class="services" id="services">
+        <div class="service-card">
+            <h3>Recording</h3>
+            <p>State-of-the-art studio recording for solo artists, bands, and voiceovers. Capture your sound with
+                clarity and warmth.</p>
+        </div>
+        <div class="service-card">
+            <h3>Mixing & Mastering</h3>
+            <p>Professional mixing and mastering to make your tracks radio-ready and streaming optimized.</p>
+        </div>
+        <div class="service-card">
+            <h3>Music Production</h3>
+            <p>Custom beats, arrangements, and full song production in any genre. Let’s create your next hit together.
+            </p>
+        </div>
+        <div class="service-card">
+            <h3>Sound Design</h3>
+            <p>Original soundtracks and audio branding for film, games, and commercials.</p>
+        </div>
+        <div class="service-card">
+            <h3>Video Shoot</h3>
+            <p>Professional video production services for music videos, events, brand stories, and promotional content.
+            </p>
+        </div>
+        <div class="service-card">
+            <h3>Video Editing</h3>
+            <p>Creative and seamless video editing tailored to your vision, ensuring high-impact visual storytelling.
+            </p>
+        </div>
+        <div class="service-card">
+            <h3>Vocal Dubbing</h3>
+            <p>High-quality vocal recording and dubbing services for films, animations, and regional language projects.
+            </p>
+        </div>
+        <div class="service-card">
+            <h3>Audio / Video Ads</h3>
+            <p>Engaging ad production that combines powerful visuals and sound to elevate your brand’s message.</p>
+        </div>
+    </section>
+    <footer id="contact">
+        <div class="footer-content">
+            <div class="footer-left">
+                <h2>Contact Us</h2>
+                <form class="contact-form">
+                    <label for="name">Name:</label>
+                    <input type="text" id="name" name="name" required>
+
+                    <label for="email">Email:</label>
+                    <input type="email" id="email" name="email" required>
+
+                    <label for="contact">Contact No.:</label>
+                    <input type="tel" id="contact" name="contact" required>
+
+                    <label for="message">Message:</label>
+                    <textarea id="message" name="message" rows="4" required></textarea>
+
+                    <button type="submit">Send</button>
+                </form>
+            </div>
+
+            <div class="footer-right">
+                <h2>Locate Us</h2><br>
+                <iframe
+                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3602.742820080718!2d81.7833837736067!3d25.446860321546566!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x399acba0cd8eaa0b%3A0x9ef0f87d4b23135e!2s7%20Shunya%20Music%20Studio!5e0!3m2!1sen!2sin!4v1752995343233!5m2!1sen!2sin"
+                    width="400" height="400" style="border:1;" allowfullscreen="" loading="lazy"
+                    referrerpolicy="no-referrer-when-downgrade"></iframe>
+                <h2>Follow Us</h2>
+                <div class="social-links">
+                    <a href="https://www.instagram.com/7_shunya_records?igsh=MTRiejVzd3dneHU3aA%3D%3D&utm_source=qr"
+                        target="_blank" title="Instagram">
+                        <img src="instagram.png" alt="Instagram" class="social-icon">
+                    </a>
+                    <a href="https://youtube.com/@7shunyamusicrecords?si=lED_mlyygUbxhggo" target="_blank"
+                        title="YouTube">
+                        <img src="youtube.png" alt="YouTube" class="social-icon">
+                    </a>
+                    <a href="https://open.spotify.com/artist/0RWQqq8jqeVBaDdffOup6T?si=t00wF2KNRJaLlHqf4VqFTg"
+                        target="_blank" title="Spotify">
+                        <img src="spotify.png" alt="Spotify" class="social-icon">
+                    </a>
+                </div>
+
+            </div>
+            <div class="footer-copy">
+                &copy; 2025 Innov8 Techies &mdash; <a href="mailto:tushartripathi2002@gmail.com">Connect</a>
+            </div>
+    </footer>
+    <button id="backToTop" title="Go to top">&#8679;</button>
+    <script>
+        document.querySelector('.contact-form').addEventListener('submit', function (e) {
+            const phoneInput = document.getElementById('contact');
+            const phoneValue = phoneInput.value.trim();
+            // Simple check: 10 digits, all numbers
+            const phonePattern = /^\d{10}$/;
+            if (!phonePattern.test(phoneValue)) {
+                alert('Please enter a valid 10-digit phone number.');
+                phoneInput.focus();
+                e.preventDefault();
+            }
+        });
+
+        // Back to Top button functionality
+        const backToTopBtn = document.getElementById('backToTop');
+        window.onscroll = function () {
+            backToTopBtn.style.display = (window.scrollY > 200) ? "block" : "none";
+        };
+        backToTopBtn.onclick = function () {
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+        };
+    </script>
+</body>
+
+</html>
